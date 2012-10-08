@@ -15,7 +15,7 @@ Public Class server
 #End Region
 
 #Region " Private WithEvents Variables "
-    Private WithEvents tmrStream As System.Timers.Timer
+    Private WithEvents tmrStream As New System.Timers.Timer
 #End Region
 
 #Region " Public Events "
@@ -114,7 +114,7 @@ Public Class server
                         If Not msg = "" Then
                             RaiseEvent ServerEvent(ServerEventType.MessageReceived, msg)
                         End If
-                        RaiseEvent ServerEvent(ServerEventType.Waiting, "")
+                        msg = ""
                         tmrStream.Enabled = True
                     End If
                 Catch iex As IO.IOException
@@ -135,7 +135,7 @@ Public Class server
 #End Region
 
 #Region " Public Methods "
-    Public Sub Listen(Optional ByVal HostIP As String = "127.0.0.1", Optional ByVal HostPort As Integer = 4444)
+    Public Sub Listen(Optional ByVal HostIP As String = "127.0.0.1", Optional ByVal HostPort As Integer = 4343)
         host = HostIP
         port = HostPort
         running = True
