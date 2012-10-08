@@ -6,14 +6,14 @@ Public Module ben9listener
 
     Sub Main()
         Console.WriteLine("Starting server.")
-        srv.Listen("127.0.0.1", 4343)
+        srv.Listen("192.168.135.35", 4343)
         Console.ReadLine()
     End Sub
 
     Private Sub srv_ServerEvent(ByVal EventType As server.ServerEventType, ByVal Message As String) Handles srv.ServerEvent
         Select Case EventType
             Case server.ServerEventType.MessageReceived
-                Console.Write(Message)
+                Console.WriteLine(Message)
             Case Else
                 Console.WriteLine("[" & EventType.ToString & "] " & Message)
         End Select

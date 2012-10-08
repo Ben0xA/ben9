@@ -7,3 +7,12 @@ C:\Development\ben9\.NET\ben9\ben9listener\obj\Debug\ben9listener.vbproj.Generat
 C:\Development\ben9\.NET\ben9\ben9listener\obj\Debug\ben9listener.exe
 C:\Development\ben9\.NET\ben9\ben9listener\obj\Debug\ben9listener.xml
 C:\Development\ben9\.NET\ben9\ben9listener\obj\Debug\ben9listener.pdb
+C:\Development\ben9\.NET\ben9\ben9listener\bin\Release\ben9listener.exe
+C:\Development\ben9\.NET\ben9\ben9listener\bin\Release\ben9listener.pdb
+C:\Development\ben9\.NET\ben9\ben9listener\bin\Release\ben9listener.xml
+C:\Development\ben9\.NET\ben9\ben9listener\obj\Release\ResolveAssemblyReference.cache
+C:\Development\ben9\.NET\ben9\ben9listener\obj\Release\ben9listener.Resources.resources
+C:\Development\ben9\.NET\ben9\ben9listener\obj\Release\ben9listener.vbproj.GenerateResource.Cache
+C:\Development\ben9\.NET\ben9\ben9listener\obj\Release\ben9listener.exe
+C:\Development\ben9\.NET\ben9\ben9listener\obj\Release\ben9listener.xml
+C:\Development\ben9\.NET\ben9\ben9listener\obj\Release\ben9listener.pdb
