@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ben9", "ben9\ben9.vbproj", "{517923C6-A025-41D3-8766-12066026AF7D}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ben9listener", "ben9listener\ben9listener.vbproj", "{CBE1054A-12A1-4F3C-80DE-F8764B468C01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{517923C6-A025-41D3-8766-12066026AF7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{517923C6-A025-41D3-8766-12066026AF7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{517923C6-A025-41D3-8766-12066026AF7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{517923C6-A025-41D3-8766-12066026AF7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBE1054A-12A1-4F3C-80DE-F8764B468C01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE1054A-12A1-4F3C-80DE-F8764B468C01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBE1054A-12A1-4F3C-80DE-F8764B468C01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE1054A-12A1-4F3C-80DE-F8764B468C01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
