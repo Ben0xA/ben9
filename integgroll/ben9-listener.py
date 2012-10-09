@@ -1,21 +1,44 @@
 #!/usr/bin/python
 
-
+from optparse import OptionParser
+from sys import exit
 import socket
 import time
 import select
 
+# handle command-line options for ben9-listener
 
+usageString = "Usage: %prog [-l log_file]"
+parser = OptionParser(usage=usageString)
+
+parser.add_option("-l", "--logfile", dest="logfile", metavar="LOGFILE", type="str", help="Name of file in which to record logged runs of ben9.py client.  Not required; prints log to standard output without this option set.")
+
+(opts,args) = parser.parse_args()
+
+# open up the logfile, if user opts to use one
+
+try:
+    logfile = open(opts.logfile,"a")
+    logfile.write("\nben9-listener started at " + time.strftime("%d/%m/%Y  %H:%M:%S",time.gmtime()) + "\n")
+except:
+    print "Error writing to log file: " + opts.logfile
+    exit(1)
+
+# create and configure listening socket
 inport = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
 inport.bind(("localhost",4444))
 inport.setblocking(0)
 inport.listen(500)
 
+# wait for responses from ben9.py client
 while 7:
   readers,writers,errors = select.select([inport],[],[])
   for read in readers:
     csocket, address = read.accept()
     text = csocket.recv(100)
-    print text + " from " + str(address)
+    if opts.logfile:
+        logfile.write(text + " from " + str(address) + "\n")
+    else:
+        print text + " from " + str(address)
 
