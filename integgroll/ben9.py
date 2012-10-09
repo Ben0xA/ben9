@@ -14,6 +14,7 @@ try:
     # export in psv time|username|ip|machine_name
     msg = time.strftime("%d/%m/%Y  %H:%M:%S",time.gmtime()) + "|" + getpass.getuser() + "|"
     msg += xport.gethostbyname(xport.gethostname()) + "|" + os.getenv('HOSTNAME')
+    xport.send(msg)
 except:
     pass
 
