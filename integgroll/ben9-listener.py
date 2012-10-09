@@ -41,7 +41,7 @@ while 7:
   for read in readers:
     csocket, address = read.accept()
     print "[*]Connection received from " + str(address)
-    text = csocket.recv(150)
+    text = csocket.recv(200)
     if opts.logfile:
         logfile.write(text + " from " + str(address) + "\n")
     else:
