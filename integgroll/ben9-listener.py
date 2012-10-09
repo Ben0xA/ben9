@@ -40,10 +40,9 @@ while 7:
   readers,writers,errors = select.select([inport],[],[])
   for read in readers:
     csocket, address = read.accept()
-    print "[*]Connection received from " + str(address)
     text = csocket.recv(200)
     if opts.logfile:
-        logfile.write(text + " from " + str(address) + "\n")
+        logfile.write(text + "\n")
     else:
         print text
 

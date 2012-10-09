@@ -5,8 +5,8 @@ Public Module ben9listener
 #End Region
 
     Sub Main()
-        Console.WriteLine("Starting server.")
-        srv.Listen("localhost", 4343)
+        Console.WriteLine("[*]Starting listener service.")
+        srv.Listen("localhost", 4444)
         Console.ReadLine()
     End Sub
 
@@ -14,8 +14,6 @@ Public Module ben9listener
         Select Case EventType
             Case server.ServerEventType.MessageReceived
                 Console.WriteLine(Message)
-            Case Else
-                Console.WriteLine("[" & EventType.ToString & "] " & Message)
         End Select
     End Sub
 End Module

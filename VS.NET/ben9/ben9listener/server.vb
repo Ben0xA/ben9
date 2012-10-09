@@ -38,10 +38,11 @@ Public Class server
 #Region " Private Methods "
     Private Sub srvListen()
         Try
-            RaiseEvent ServerEvent(ServerEventType.Listening, "Starting Server: Listening on " & host & " on port " & port & "...")
+            RaiseEvent ServerEvent(ServerEventType.Listening, "Service started on " & host & " on port " & port & "...")
             srvr = New TcpListener(IPAddress.Parse(host), port)
             srvr.Start()
             tmrStream.Interval = 100 ' 1 Second
+            Console.WriteLine("[*]Server started.")
             Do While Running
                 srvWaitForConnection()
             Loop

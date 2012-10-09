@@ -10,6 +10,6 @@ Public Module ben9
     End Sub
 
     Private Sub clt_ClientEvent(ByVal EventType As client.ClientEventType, ByVal Message As String) Handles clt.ClientEvent
-        Console.WriteLine("[" & EventType.ToString & "] " & Message)
+        Console.WriteLine("[*] " & Message)
     End Sub
 End Module
