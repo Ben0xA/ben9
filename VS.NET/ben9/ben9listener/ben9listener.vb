@@ -6,7 +6,7 @@ Public Module ben9listener
 
     Sub Main()
         Console.WriteLine("Starting server.")
-        srv.Listen("127.0.0.1", 4343)
+        srv.Listen("localhost", 4343)
         Console.ReadLine()
     End Sub
 
