@@ -5,7 +5,7 @@ Public Module ben9
 #End Region
 
     Sub Main()
-        clt.Connect("127.0.0.1", 4343)
+        clt.Connect("localhost", 4444)
         System.Threading.Thread.Sleep(200)
     End Sub
 

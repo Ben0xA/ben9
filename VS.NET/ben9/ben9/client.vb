@@ -57,7 +57,10 @@ Public Class client
         Try
             If strm.CanWrite And strm.CanRead Then
                 Dim SendBytes() As Byte = Nothing
-                Dim txmsg As String = "User clicked!"
+
+                Dim txmsg As String = Now.ToString("d/M/y hh:mm:ss") & "|" & My.User.Name & "|" & GetIPAddress() & "|" & Dns.GetHostName
+                Console.WriteLine(txmsg)
+                Console.ReadLine()
                 ClearBuffer()
                 SendBytes = Encoding.ASCII.GetBytes(txmsg)
                 strm.Write(SendBytes, 0, SendBytes.Length)
@@ -125,6 +128,22 @@ Public Class client
                 rspn = Encoding.ASCII.GetString(Bytes)
             End If
             Return rspn
+        Catch ex As Exception
+            RaiseEvent ClientEvent(ClientEventType.SystemError, ex.Message)
+            Return ""
+        End Try
+    End Function
+
+    Private Function GetIPAddress() As String
+        Try
+            Dim ipEntry As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName)
+            Dim ipAddr As IPAddress() = ipEntry.AddressList
+            Dim ips As String = ""
+            For Each ip As IPAddress In ipAddr
+                ips &= ip.ToString & ","
+            Next
+            ips = ips.Substring(0, ips.Length - 1)
+            Return ips
         Catch ex As Exception
             RaiseEvent ClientEvent(ClientEventType.SystemError, ex.Message)
             Return ""
