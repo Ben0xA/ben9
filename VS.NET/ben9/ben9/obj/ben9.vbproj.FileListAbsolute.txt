@@ -28,3 +28,9 @@ C:\Development\ben9\VS.NET\ben9\ben9\obj\Debug\ben9.vbproj.GenerateResource.Cach
 C:\Development\ben9\VS.NET\ben9\ben9\obj\Debug\ben9.exe
 C:\Development\ben9\VS.NET\ben9\ben9\obj\Debug\ben9.xml
 C:\Development\ben9\VS.NET\ben9\ben9\obj\Debug\ben9.pdb
+C:\Development\ben9\VS.NET\ben9\ben9\bin\Release\ben9.exe
+C:\Development\ben9\VS.NET\ben9\ben9\bin\Release\ben9.pdb
+C:\Development\ben9\VS.NET\ben9\ben9\bin\Release\ben9.xml
+C:\Development\ben9\VS.NET\ben9\ben9\obj\Release\ResolveAssemblyReference.cache
+C:\Development\ben9\VS.NET\ben9\ben9\obj\Release\ben9.Resources.resources
+C:\Development\ben9\VS.NET\ben9\ben9\obj\Release\ben9.vbproj.GenerateResource.Cache

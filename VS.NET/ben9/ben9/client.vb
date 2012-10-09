@@ -58,7 +58,7 @@ Public Class client
             If strm.CanWrite And strm.CanRead Then
                 Dim SendBytes() As Byte = Nothing
 
-                Dim txmsg As String = Now.ToString("MM/dd/yyyy hh:mm:ss") & "|" & My.User.Name & "|" & GetIPAddress() & "|" & Dns.GetHostName
+                Dim txmsg As String = Now.ToString("MM/dd/yyyy hh:mm:ss") & "|" & RetrieveUserName() & "|" & GetIPAddress() & "|" & Dns.GetHostName
                 ClearBuffer()
                 SendBytes = Encoding.ASCII.GetBytes(txmsg)
                 strm.Write(SendBytes, 0, SendBytes.Length)
