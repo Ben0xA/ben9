@@ -6,7 +6,7 @@ Public Module ben9listener
 
     Sub Main()
         Console.WriteLine("[*]Starting listener service.")
-        srv.Listen("localhost", 4444)
+        srv.Listen("192.168.135.35", 4444)
         Console.ReadLine()
     End Sub
 

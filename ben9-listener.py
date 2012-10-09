@@ -42,8 +42,8 @@ while 7:
     csocket, address = read.accept()
     text = csocket.recv(300)
     text = time.strftime("%m/%d/%Y %H:%M:%S",time.localtime()) + "|" + text 
-    text = text + "|" + address[0] + "|" + str(socket.gethostbyaddr(address[0])[0]) 
-    print text
+    text = text + "|" + address[0] + "|" + str(socket.gethostbyaddr(address[0])[0])
+    
     if opts.logfile:
       logfile.write(text + "\n")
     else:

@@ -5,7 +5,7 @@
         <data xmlns="http://nbpython.dev.java.net/ns/php-project/1">
             <name>ben9</name>
             <sources>
-                <root id="src.integgroll.dir"/>
+                <root id="src.ben9.dir"/>
             </sources>
             <tests/>
         </data>
