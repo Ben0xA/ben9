@@ -34,21 +34,19 @@ inport.bind(("localhost",4444))
 inport.setblocking(0)
 inport.listen(5)
 print "[*]Server started."
+print "ServerTime|RemoteIP|RemoteName|ClientTime|ClientUser|ClientIP|ClientName"
 
 # wait for responses from ben9.py client
 while 7:
   readers,writers,errors = select.select([inport],[],[])
   for read in readers:
     csocket, address = read.accept()
-    text = csocket.recv(300)
-    text = time.strftime("%m/%d/%Y %H:%M:%S",time.localtime()) + "|" + text 
-    text = text + "|" + address[0] + "|" + str(socket.gethostbyaddr(address[0])[0])
+    cltext = csocket.recv(300)
+    text = time.strftime("%m/%d/%Y %H:%M:%S",time.localtime()) + "|" 
+    text += address[0] + "|" + str(socket.gethostbyaddr(address[0])[0]) + "|"
+    text += cltext
     
     if opts.logfile:
       logfile.write(text + "\n")
     else:
-      print text 
-
-      
-
-
+      print text
