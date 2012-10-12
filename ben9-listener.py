@@ -55,10 +55,21 @@ while kp.lower() != 'q':
   if readers:      
     for read in readers:
       csocket, address = read.accept()
-      cltext = csocket.recv(300)
-      text = time.strftime("%m/%d/%Y %H:%M:%S",time.localtime()) + "|" 
-      text += address[0] + "|" + str(socket.gethostbyaddr(address[0])[0]) + "|"
-      text += cltext
+      text = time.strftime("%m/%d/%Y %H:%M:%S",time.localtime()) + "|"
+      text += address[0] + "|"
+      
+      try:
+        hn = str(socket.gethostbyaddr(address[0])[0])
+      except:
+        hn = "unknown"
+        
+      text += hn + "|"
+      try:
+        cltext = csocket.recv(300)
+      except:
+        cltext = "|||ClientDisconnected"
+        
+      text += cltext    
 
       if opts.logfile:
         logfile.write(text + "\n")

@@ -112,6 +112,7 @@ Public Class server
                         Loop
 
                         msg = msg.Replace(Chr(0), "")
+                        msg = Now.ToString("MM/dd/yyyy hh:mm:ss") & "|" & clnt.Client.RemoteEndPoint.ToString & "|" & msg
                         If Not msg = "" Then
                             RaiseEvent ServerEvent(ServerEventType.MessageReceived, msg)
                         End If
